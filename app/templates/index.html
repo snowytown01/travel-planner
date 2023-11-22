@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <title>travel-planner_main</title>
+        <link rel="stylesheet" href="../static/mainstyle.css">
+        <script type="text/javascript" src="../static/mainscript.js"></script>
+    </head>
+    <body>
+        <aside id="aside">
+            <div id="addingbox">
+                <input class="input" id="lon" type="number" step="0.000001" placeholder="lon" required="">
+                <input class="input" id="lat" type="number" step="0.000001" placeholder="lat" required="">
+                <input class="input" id="util" type="number" max="99999" placeholder="util" required="">
+                <input class="input" id="stay" type="number" placeholder="stay" required="">
+                <input class="input" id="open" type="time" placeholder="open" required="">
+                <input class="input" id="close" type="time" placeholder="close" required="">
+                <input id="addingboxbutton" type="button" value="Add" onclick="create_destination()">
+            </div>
+            <div id="destbox">
+                <div id="readme", style="width: 440px; height: 130px; background-color: lightgreen; position: relative; left: 4.5px; text-align: left; margin-top: 5px; border-radius: 0px;">
+                1. 目的地をAddを押して追加して下さい。<br>
+                →経度、緯度、利得、滞在時間、open時間、close時間順<br>
+                →滞在時間の単位は「分」です<br>
+                →戻る場所は 「open~close = 午前12:00~午前12:00」<br>
+                →その他24時間営業の場所は「午前12:00~午後11:59」<br>
+                →目的地の数は「最大10個」までをおすすめします。<br><br>
+                </div>
+                <div id="readme", style="width: 440px; height: 30px; background-color: lightgreen; position: relative; left: 4.5px; text-align: left; margin-top: 5px; border-radius: 0px;">
+                2. 下のResetボタンで目的地を初期化できます。<br><br>
+                </div>
+                <div id="readme", style="width: 440px; height: 30px; background-color: lightgreen; position: relative; left: 4.5px; text-align: left; margin-top: 5px; border-radius: 0px;">
+                3. 下に出発時間を入力してStartボタンを押して下さい。<br>
+                </div>
+            </div>
+
+            <input id="resetbutton" name="resetbutton" type="button" value="Reset" onclick="delete_all_destinations()">
+            <input id="starttime" name="starttime" type="time">
+            <input id="startbutton" name="startbutton" type="button" value="Start" onclick="read_optimalroute()">
+        </aside>
+
+        <section id="section">
+            
+            
+
+        </section>
+
+
+    </body>
+</html>
